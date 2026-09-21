@@ -298,6 +298,12 @@ footer {
   width: auto;
 }
 .image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Evita que la imagen se salga en celulares */
+  height: auto;
+}
+.image {
   height: 400px;
   width: 300px;
   display: flex;
