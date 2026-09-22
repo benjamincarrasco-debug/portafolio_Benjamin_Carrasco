@@ -48,3 +48,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+const themeToggle = document.getElementById("theme-toggle");
+
+// 1. Cargar tema guardado en el navegador
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-mode");
+  themeToggle.textContent = "☀️";
+}
+
+// 2. Evento para cambiar de tema al hacer clic
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  const isDark = document.body.classList.contains("dark-mode");
+
+  // Cambiar el ícono: Sol si está en oscuro, Luna si está en claro
+  themeToggle.textContent = isDark ? "☀️" : "🌙";
+
+  // Guardar la preferencia en localStorage
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});

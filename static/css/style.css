@@ -320,3 +320,32 @@ video {
   display: flex;
   margin: 0 auto;
 }
+/* Botón del tema */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* Colores para el Modo Oscuro */
+body.dark-mode {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+body.dark-mode nav,
+body.dark-mode .card,
+body.dark-mode .links {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+body.dark-mode .links a {
+  color: #f8fafc;
+}
